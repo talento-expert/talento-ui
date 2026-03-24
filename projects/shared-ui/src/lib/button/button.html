@@ -1,0 +1,10 @@
+<button 
+  [class]="buttonClasses"
+  [disabled]="disabled || loading"
+  (click)="onClick($event)"
+  type="button">
+  <span *ngIf="loading" class="talento-button__spinner"></span>
+  <span class="talento-button__content">
+    <ng-content></ng-content>
+  </span>
+</button>
