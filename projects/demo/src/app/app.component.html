@@ -1,0 +1,73 @@
+<div class="demo-container">
+  <header>
+    <h1>{{ title }}</h1>
+    <p>Testing and showcasing Talento Shared UI Components</p>
+  </header>
+
+  <main>
+    <section class="component-section">
+      <h2>Button Component</h2>
+      
+      <div class="demo-group">
+        <h3>Button </h3>
+        <div class="button-row">
+          <talento-button type="primary" (buttonClick)="onButtonClick($event)">
+            Primary Button
+          </talento-button>
+          
+          <talento-button type="secondary" (buttonClick)="onButtonClick($event)">
+            Secondary Button
+          </talento-button>
+          
+          <talento-button type="danger" (buttonClick)="onButtonClick($event)">
+            Danger Button
+          </talento-button>
+          
+          <talento-button type="success" (buttonClick)="onButtonClick($event)">
+            Success Button
+          </talento-button>
+          
+          <talento-button type="default" (buttonClick)="onButtonClick($event)">
+            Default Button
+          </talento-button>
+        </div>
+      </div>
+
+      <div class="demo-group">
+        <h3>Button Sizes</h3>
+        <div class="button-row">
+          <talento-button type="primary" size="small" (buttonClick)="onButtonClick($event)">
+            Small
+          </talento-button>
+          
+          <talento-button type="primary" size="medium" (buttonClick)="onButtonClick($event)">
+            Medium
+          </talento-button>
+          
+          <talento-button type="primary" size="large" (buttonClick)="onButtonClick($event)">
+            Large
+          </talento-button>
+        </div>
+      </div>
+
+      <div class="demo-group">
+        <h3>Button States</h3>
+        <div class="button-row">
+          <talento-button type="primary" [disabled]="true">
+            Disabled
+          </talento-button>
+          
+          <talento-button type="primary" [loading]="true">
+            Loading
+          </talento-button>
+        </div>
+        
+        <div class="button-row">
+          <talento-button type="primary" [fullWidth]="true" (buttonClick)="onButtonClick($event)">
+            Full Width Button
+          </talento-button>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
