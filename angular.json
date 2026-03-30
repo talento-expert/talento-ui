@@ -13,7 +13,10 @@
       "prefix": "talento",
       "architect": {
         "build": {
-          "builder": "@angular/build:ng-packagr",
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/shared-ui/ng-package.json"
+          },
           "configurations": {
             "production": {
               "tsConfig": "projects/shared-ui/tsconfig.lib.prod.json"
