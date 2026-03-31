@@ -1,0 +1,81 @@
+{
+  "TEAM": {
+    "TEAM-MANAGEMENT": "إدارة الفريق",
+    "ACTIVE-EMPLOYEES": "الموظفون النشطون"
+  },
+  "LANG": "English",
+  "INVOICE":{
+    "FROM": "من",
+    "TO": "إلى",
+    "DUE_DATE": "تاريخ الاستحقاق",
+    "ISSUE_DATE": "تاريخ الإصدار",
+    "AMOUNT": "المبلغ",
+    "PAYMENT_DATE": "تاريخ الدفع"
+  },
+  "BONUS_METHODS": {
+    "PERCENTAGE": "نسبة مئوية",
+    "DAYS": "أيام",
+    "AMOUNT": "مبلغ"
+  },
+  "DEDUCTION_METHODS": {
+    "PERCENTAGE": "نسبة مئوية",
+    "DAYS": "أيام",
+    "AMOUNT": "مبلغ"
+  },
+  "GIVE_BONUS": {
+    "CURRENT_SALARY": "الراتب الحالي:",
+    "BONUS": {
+      "METHOD": "طريقة المكافأة",
+      "REASON": "سبب المكافأة",
+      "AMOUNT": "مبلغ المكافأة: {{amount}} {{currency}}",
+      "OTHER": "أخرى"
+    },
+    "EFFECTIVE_DATE": {
+      "LABEL": "تاريخ السريان",
+      "CURRENT_MONTH": "الشهر الحالي",
+      "NEXT_MONTH": "الشهر القادم"
+    },
+    "BUTTONS": {
+      "CANCEL": "إلغاء",
+      "SAVE": "حفظ"
+    },
+    "CONFIRMATION": {
+      "TITLE": "تأكيد المكافأة",
+      "DESCRIPTION": "هل أنت متأكد من منح مكافأة بقيمة {{amount}} {{currency}}؟",
+      "SUCCESS_TITLE": "نجح",
+      "SUCCESS_MESSAGE": "تم تطبيق المكافأة بقيمة {{amount}} {{currency}} بنجاح."
+    }
+  },
+  "APPLY_DEDUCTION": {
+    "CURRENT_SALARY": "الراتب الحالي:",
+    "DEDUCTION": {
+      "METHOD": "طريقة الخصم",
+      "REASON": "سبب الخصم",
+      "AMOUNT": "مبلغ الخصم: {{amount}} {{currency}}",
+      "OTHER": "أخرى"
+    },
+    "EFFECTIVE_DATE": {
+      "LABEL": "تاريخ السريان",
+      "CURRENT_MONTH": "الشهر الحالي",
+      "NEXT_MONTH": "الشهر القادم"
+    },
+    "BUTTONS": {
+      "CANCEL": "إلغاء",
+      "SAVE": "حفظ"
+    },
+    "CONFIRMATION": {
+      "TITLE": "تأكيد الخصم",
+      "DESCRIPTION": "هل أنت متأكد من تطبيق خصم بقيمة {{amount}} {{currency}}؟",
+      "SUCCESS_TITLE": "نجح",
+      "SUCCESS_MESSAGE": "تم تطبيق الخصم بقيمة {{amount}} {{currency}} بنجاح."
+    }
+  },
+  "EMPLOYEE_DETAILS": {
+    "HIRING_INFO": {
+      "BUTTONS": {
+        "GIVE_BONUS": "منح مكافأة",
+        "APPLY_DEDUCTION": "تطبيق خصم"
+      }
+    }
+  }
+}

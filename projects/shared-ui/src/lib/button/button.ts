@@ -1,5 +1,13 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NzIconModule ,provideNzIconsPatch } from 'ng-zorro-antd/icon';
+import {
+  DeleteOutline,
+  DownloadOutline,
+  EyeOutline,
+  FileAddOutline,
+  UploadOutline
+} from '@ant-design/icons-angular/icons';
 
 export type ButtonType = 'primary' | 'secondary' | 'danger' | 'success' | 'default';
 export type ButtonSize = 'small' | 'medium' | 'large';
@@ -7,7 +15,16 @@ export type ButtonSize = 'small' | 'medium' | 'large';
 @Component({
   selector: 'talento-button',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule , NzIconModule],
+  providers: [
+    ...provideNzIconsPatch([
+      EyeOutline,
+      DownloadOutline,
+      DeleteOutline,
+      FileAddOutline,
+      UploadOutline
+    ])
+  ],
   templateUrl: './button.html',
   styleUrl: './button.css',
 })

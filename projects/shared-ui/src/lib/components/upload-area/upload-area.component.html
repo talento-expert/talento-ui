@@ -1,0 +1,54 @@
+<div class="upload-area" (click)="fileInput.click()" [class.disabled]="getAsFormGroup(candidate).get(fileType)?.value?.uploading">
+  <div class="upload-placeholder">
+    @if(!hasFiles()){
+    <p>{{ fileType | titlecase }}
+    @if(required){
+      <span class="required-asterisk">*</span>
+    }
+    @if(allowMultiple){
+      <span class="multiple-hint">(Multiple files allowed)</span>
+    }
+   </p>
+
+    <span nz-icon nzType="cloud-upload"></span>
+    <span class="file-info">Max Size: 5 MB</span>
+    } @else {
+      @if(allowMultiple){
+        <!-- Display multiple files -->
+        <div class="files-list">
+          @for(file of getUploadedFiles(); track $index){
+            <div class="file-item">
+              <span class="file-name">{{ file?.name?.slice(0, maxFileNameLength) }}</span>
+              @if(file?.uploading){
+                <nz-spin nzSimple class="inline-spinner"></nz-spin>
+              } @else {
+                <span class="remove-file-icon" (click)="onRemoveFile(fileType, index, $index); $event.stopPropagation()">
+                  <img src="../../../../assets/svg/delete.svg" alt="Remove" />
+                </span>
+              }
+            </div>
+          }
+        </div>
+      } @else {
+        <!-- Display single file -->
+        <span class="file-name">{{ getAsFormGroup(candidate).get(fileType)?.value?.name?.slice(0, maxFileNameLength) }}</span>
+      }
+    }
+  </div>
+  @if(!allowMultiple && getAsFormGroup(candidate).get(fileType)?.value?.uploading){
+    <nz-spin nzSimple class="inline-spinner"></nz-spin>
+  }
+  <input
+    #fileInput
+    type="file"
+    [accept]="accept"
+    [multiple]="allowMultiple"
+    (change)="onLocalFileSelected($event, index, fileType)"
+    hidden
+  />
+  @if(!allowMultiple && getAsFormGroup(candidate).get(fileType)?.value?.name){
+  <span (click)="onRemoveFile(fileType, index); $event.stopPropagation()">
+    <img src="../../../../assets/svg/delete.svg" alt="" />
+  </span>
+  }
+</div>

@@ -1,0 +1,278 @@
+// @media (max-width: 900px) {
+//   table,
+//   thead,
+//   tbody,
+//   th,
+//   td,
+//   tr {
+//     display: block !important;
+//     width: 100% !important;
+//   }
+
+//   /* Hide table headers in mobile view */
+//   thead {
+//     display: none !important;
+//   }
+
+//   tbody tr {
+//     margin-bottom: 1rem !important;
+//     border: 1px solid #ddd !important;
+//     border-radius: 8px !important;
+//     padding: 1rem !important;
+//   }
+
+//   td {
+//     display: flex !important;
+//     justify-content: space-between !important;
+//     padding: 0.5rem !important;
+//     border: none !important;
+//     text-align: end !important;
+
+//     /* Use ::before to display column headers in mobile view */
+//     &::before {
+//       content: attr(data-label) !important;
+//       font-weight: bold !important;
+//       width: 50% !important;
+//       text-align: left !important;
+//     }
+//   }
+// }
+
+@media (max-width: 900px) {
+  nz-table {
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+      display: block !important;
+      width: 100% !important;
+    }
+
+    /* Hide table headers in mobile view */
+    thead {
+      display: none !important;
+    }
+
+    tbody tr {
+      margin-bottom: 1rem !important;
+      border: 1px solid #ddd !important;
+      border-radius: 8px !important;
+      padding: .5rem !important;
+    }
+
+    td {
+      display: flex !important;
+      justify-content: space-between !important;
+      padding: 0.5rem !important;
+      border: none !important;
+      text-align: end !important;
+      text-wrap: wrap !important;
+
+    /* Use ::before to display column headers in mobile view */
+    &::before {
+      content: attr(data-label) !important;
+      font-weight: 500 !important;
+      width: 50% !important;
+      min-width: 3rem !important;
+      flex-shrink: 0 !important;
+      white-space: nowrap !important;
+      text-align: left !important;
+      text-wrap: wrap !important;
+    }
+
+      //  > * {
+      //   width: 60%;
+      //   text-align: right;
+      // }
+    }
+
+    /* First td (Name) - full width without label */
+    td:first-child {
+      display: block !important;
+      font-weight: bold !important;
+      width: 100% !important;
+      &::before {
+        display: none !important;
+      }
+
+      > * {
+        width: 100% !important;
+        text-align: left !important;
+      }
+
+      p {
+        width: 65% !important;
+        // text-wrap: wrap !important;
+        // word-break: break-word;
+        // overflow-wrap: break-word;
+      }
+      .name {
+        width: 50% !important;
+        // text-wrap: wrap !important;
+        // word-break: break-word;
+        // overflow-wrap: break-word;
+      }
+    
+
+    }
+    .email {
+      width: 50% !important;
+      // text-wrap: wrap !important;
+      // word-break: break-word;
+      // overflow-wrap: break-word;
+    }
+
+    td{
+      p.ant-empty-description{
+        width: 100% !important;
+      }
+    }
+
+    /* Position dropdown menu cell at top right */
+    td.custom-cell {
+      position: absolute !important;
+      top: 1.3rem !important;
+      right: 1rem !important;
+      width: auto !important;
+      padding: 0 !important;
+      i{
+        font-size: 1.2rem;
+      }
+
+      &::before {
+        display: none !important;
+      }
+
+      > * {
+        width: auto !important;
+      }
+    }
+
+
+    /* Make tbody tr position relative for absolute positioning */
+    tbody tr {
+      position: relative !important;
+      margin-bottom: 1rem !important;
+      border-radius: 8px !important;
+      padding: .5rem !important;
+    }
+
+    /* Hide ::before labels when table is empty */
+    .ant-table-placeholder {
+      td {
+        display: block !important;
+
+        &::before {
+          display: none !important;
+        }
+      }
+
+      tr {
+        border: none !important;
+        padding: 0 !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .ant-table-pagination.ant-pagination {
+    justify-content: center;
+  }
+
+  .ant-pagination-item,
+  .ant-pagination-prev,
+  .ant-pagination-next {
+    min-width: 24px;
+    height: 24px;
+    line-height: 24px;
+    width: 24px;
+  }
+
+  .txt-heading {
+    font-size: 16px;
+  }
+  .component--header__actions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .component--header__actions .flex-btn-icon {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px !important;
+  }
+  
+}
+
+.modal-responsive {
+  .ant-modal-body {
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+  }
+
+  @media (max-width: 767px) {
+    .ant-modal {
+      max-width: calc(100vw - 32px) !important;
+      top: 16px !important;
+      padding-bottom: 16px;
+    }
+
+    .ant-modal-content {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 !important;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .ant-modal {
+      top: 0 !important;
+      max-width: 100vw !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    .ant-modal-content {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 !important;
+      border-radius: 0 !important;
+      min-height: 100vh;
+    }
+
+    .ant-modal-body {
+      max-height: calc(100vh - 80px);
+    }
+  }
+  // .ant-modal-content{
+  //   width: 350px !important;
+  // }
+}
+
+@media (max-width: 767px) {
+  .small-popup {
+    .ant-modal {
+      top: 0 !important;
+      max-width: 100vw !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    .ant-modal-content {
+      width: 320px !important;
+      max-width: 100% !important;
+      margin: 0 auto !important;
+      min-height: 35vh;
+    }
+
+    .ant-modal-body {
+      max-height: calc(100vh - 80px);
+      overflow-y: auto;
+    }
+  }
+}
