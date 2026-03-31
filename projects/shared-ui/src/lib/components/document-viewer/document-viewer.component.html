@@ -1,0 +1,78 @@
+<div class="document-cards-grid">
+  @for (section of documentSections; track section.type) {
+    <div class="">
+      @if (showSectionHeaders) {
+        <h3 class="document-card-title">{{ section.displayName }}</h3>
+      }
+<div class="document-card">
+
+      @if (section.hasFiles && section.files.length > 0) {
+        <div class="document-card-content">
+          <div class="document-icon-wrapper">
+            <i class="i-document document-icon"></i>
+          </div>
+          <div class="document-file-info">
+            <span class="document-filename" title="{{ section.files[0].originalName }}">{{ section.files[0].originalName.slice(0, 30) }}...</span>
+          </div>
+          <div class="document-actions">
+            @if(canRead) {
+            <span
+              class="action-btn"
+              (click)="viewFile(section.files[0])"
+              title="View"
+            >
+              <i nz-icon nzType="eye" nzTheme="outline"></i>
+            </span>
+          }
+          @if(canRead) {
+            <span
+              class="action-btn"
+              (click)="downloadFile(section.files[0])"
+              title="Download"
+            >
+              <i nz-icon nzType="download" nzTheme="outline"></i>
+            </span>
+            }
+            @if(canDelete) {
+            <span
+              class="action-btn"
+              (click)="removeFile(section.files[0].id)"
+              title="Delete"
+            >
+              <i nz-icon nzType="delete" nzTheme="outline"></i>
+            </span>
+            }
+          </div>
+        </div>
+      } @else {
+        <div class="document-card-content upload-state">
+          <div class="document-icon-wrapper upload-icon-wrapper">
+            <!-- <i class="i-upload document-icon"></i> -->
+            <span nz-icon nzType="file-add" class="fs-20" nzTheme="outline"></span>
+          </div>
+          <div class="document-upload-info">
+            <span class="upload-text">Upload {{ section.displayName }}</span>
+            <span class="upload-hint">PDF Only accepted formats with max size of 5 MB</span>
+          </div>
+          <div class="document-actions">
+            @if(canCreate) {
+            <button 
+              nz-button 
+              nzType="text" 
+              class="action-btn"
+              (click)="uploadFile(section.type)"
+              title="Upload"
+            >
+              <i nz-icon nzType="upload" nzTheme="outline"></i>
+            </button>
+            }
+          </div>
+        </div>
+      }
+</div>
+    </div>
+
+  }
+</div>
+
+

@@ -1,0 +1,81 @@
+{
+  "TEAM": {
+    "TEAM-MANAGEMENT": "Team Management",
+    "ACTIVE-EMPLOYEES": "Active Employees"
+  },
+  "LANG": "عربي",
+  "INVOICE":{
+    "FROM": "From",
+    "TO": "To",
+    "DUE_DATE": "Due Date",
+    "ISSUE_DATE": "Issue Date",
+    "AMOUNT": "Amount",
+    "PAYMENT_DATE": "Payment Date"
+  },
+  "BONUS_METHODS": {
+    "PERCENTAGE": "Percentage",
+    "DAYS": "Days",
+    "AMOUNT": "Amount"
+  },
+  "DEDUCTION_METHODS": {
+    "PERCENTAGE": "Percentage",
+    "DAYS": "Days",
+    "AMOUNT": "Amount"
+  },
+  "GIVE_BONUS": {
+    "CURRENT_SALARY": "Current Salary:",
+    "BONUS": {
+      "METHOD": "Bonus Method",
+      "REASON": "Bonus Reason",
+      "AMOUNT": "Bonus Amount: {{amount}} {{currency}}",
+      "OTHER": "Other"
+    },
+    "EFFECTIVE_DATE": {
+      "LABEL": "Effective Date",
+      "CURRENT_MONTH": "Current Month",
+      "NEXT_MONTH": "Next Month"
+    },
+    "BUTTONS": {
+      "CANCEL": "Cancel",
+      "SAVE": "Save"
+    },
+    "CONFIRMATION": {
+      "TITLE": "Confirm Bonus",
+      "DESCRIPTION": "Are you sure you want to give a bonus of {{amount}} {{currency}}?",
+      "SUCCESS_TITLE": "Success",
+      "SUCCESS_MESSAGE": "Bonus of {{amount}} {{currency}} has been applied successfully."
+    }
+  },
+  "APPLY_DEDUCTION": {
+    "CURRENT_SALARY": "Current Salary:",
+    "DEDUCTION": {
+      "METHOD": "Deduction Method",
+      "REASON": "Deduction Reason",
+      "AMOUNT": "Deduction Amount: {{amount}} {{currency}}",
+      "OTHER": "Other"
+    },
+    "EFFECTIVE_DATE": {
+      "LABEL": "Effective Date",
+      "CURRENT_MONTH": "Current Month",
+      "NEXT_MONTH": "Next Month"
+    },
+    "BUTTONS": {
+      "CANCEL": "Cancel",
+      "SAVE": "Save"
+    },
+    "CONFIRMATION": {
+      "TITLE": "Confirm Deduction",
+      "DESCRIPTION": "Are you sure you want to apply a deduction of {{amount}} {{currency}}?",
+      "SUCCESS_TITLE": "Success",
+      "SUCCESS_MESSAGE": "Deduction of {{amount}} {{currency}} has been applied successfully."
+    }
+  },
+  "EMPLOYEE_DETAILS": {
+    "HIRING_INFO": {
+      "BUTTONS": {
+        "GIVE_BONUS": "Give Bonus",
+        "APPLY_DEDUCTION": "Apply Deduction"
+      }
+    }
+  }
+}

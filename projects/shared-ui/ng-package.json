@@ -1,7 +1,20 @@
 {
   "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
-  "dest": "../../dist/shared-ui",
+  "dest": "../../dist/my-lib",
   "lib": {
-    "entryFile": "src/public-api.ts"
-  }
+    "entryFile": "src/public-api.ts",
+    "cssUrl": "none"
+  },
+  "assets": [
+    {
+      "glob": "**/*",
+      "input": "./src/lib/styles",
+      "output": "/styles"
+    },
+    {
+      "glob": "**/*",
+      "input": "./src/lib/assets",
+      "output": "/assets"
+    }
+  ]
 }
